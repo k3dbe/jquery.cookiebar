@@ -56,7 +56,7 @@
 		expireDate.setTime(expireDate.getTime()+(options.expireDays*24*60*60*1000));
 		expireDate = expireDate.toGMTString();
 		
-		var cookieEntry = 'cb-enabled={value}; expires='+expireDate+'; path=/';
+		var cookieEntry = 'cb-enabled={value}; expires='+expireDate+'; domain='+options.domain.replace('www','')+'; path=/';
 		
 		//Retrieves current cookie preference
 		var i,cookieValue='',aCookie,aCookies=document.cookie.split('; ');
